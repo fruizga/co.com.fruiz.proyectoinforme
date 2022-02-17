@@ -1,5 +1,6 @@
 package co.com.fruiz.proyectoinforme.stepdefinitions;
 
+import co.com.fruiz.proyectoinforme.tasks.AboutUs;
 import co.com.fruiz.proyectoinforme.tasks.OpenUp;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -21,7 +22,7 @@ public class AboutBancoStepDefinitions {
 
     @When("^he searches for the document Politicas de tratamiento y de proteccion de datos personales de proveedores on the Bancolombia page$")
     public void heSearchesForTheDocumentPoliticasDeTratamientoYDeProteccionDeDatosPersonalesDeProveedoresOnTheBancolombiaPage() {
-
+        OnStage.theActorInTheSpotlight().attemptsTo(AboutUs.onThePage());
     }
 
     @Then("^he finds the document called resources Politicas de tratamiento y de proteccion de datos personales de proveedores$")
